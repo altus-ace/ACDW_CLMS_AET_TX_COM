@@ -1,0 +1,26 @@
+﻿CREATE TABLE [adw].[AHR_Population_History] (
+    [URN]                INT            IDENTITY (1, 1) NOT NULL,
+    [HICN]               VARCHAR (50)   NOT NULL,
+    [MBI]                VARCHAR (50)   NULL,
+    [Plan]               VARCHAR (50)   NULL,
+    [SubPlan]            VARCHAR (100)  NULL,
+    [FirstName]          VARCHAR (50)   NULL,
+    [LastName]           VARCHAR (50)   NULL,
+    [Sex]                VARCHAR (1)    NULL,
+    [DOB]                DATE           NULL,
+    [CurrentRS]          DECIMAL (5, 4) DEFAULT ((0)) NULL,
+    [CurrentDisplayGaps] INT            DEFAULT ((0)) NULL,
+    [CurrentGaps]        INT            DEFAULT ((0)) NULL,
+    [Age]                INT            NULL,
+    [TIN]                VARCHAR (50)   NULL,
+    [TIN_NAME]           VARCHAR (50)   NULL,
+    [NPI]                VARCHAR (50)   NULL,
+    [NPI_NAME]           VARCHAR (50)   NULL,
+    [PRIM_SPECIALTY]     VARCHAR (50)   NULL,
+    [RUN_DATE]           DATE           NULL,
+    [RUN_YEAR]           INT            NULL,
+    [RUN_MTH]            INT            NULL,
+    [LOAD_DATE]          DATE           DEFAULT (sysdatetime()) NULL,
+    [LOAD_USER]          VARCHAR (50)   DEFAULT (suser_sname()) NULL
+);
+
